@@ -12,7 +12,6 @@ module.exports = function(grunt) {
 
 	grunt.registerMultiTask('davupload', 'Webdav task', function() {
 		options = this.options({
-			overwrite: false
 		});
 
 		grunt.log.debug('Preparing copy...', this.files);
@@ -48,6 +47,7 @@ module.exports = function(grunt) {
 								callback();
 								return;
 							}
+							// TODO: check if file exists?
 							wfs2.writeFile(path.join(options.target, file), fs.readFileSync(file), 'utf8', function(err) {
 								if(err)
 									return callback(err);
@@ -77,29 +77,5 @@ module.exports = function(grunt) {
 		// go
 		transferFiles();
 
-		/*wfs.readdir(options.target, function(err, result) {
-			if(err && err.httpStatusCode && err.httpStatusCode === 404) {
-				grunt.log.debug('Creating new folder...');
-				wfs.mkdir(options.target, transferFiles);
-			}
-			else if(!err && options.overwrite) {
-				grunt.log.writeln('Overwrinting...');
-				wfs.unlink(options.target, function(err) {
-					if(err)
-						return callback(err);
-
-					wfs.mkdir(options.target, transferFiles);
-				});
-			}
-			else if(!err && !options.overwrite) {
-				grunt.log.error('Impossible overwrite, to force this, use the option `overwrite`.');
-				return done(false);
-			}
-			else if(err) {
-				grunt.log.error(err);
-				return done(false);
-			}
-
-		});*/
 	});
 };
