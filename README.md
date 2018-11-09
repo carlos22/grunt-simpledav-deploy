@@ -7,7 +7,7 @@ This is a fork of https://www.npmjs.com/package/grunt-simpledav-upload.
 ```
 sudo npm install -g grunt
 npm init # you might skip this if you have a package.json
-npm install grunt-simpledav-upload grunt-contrib-watch https://github.com/carlos22/grunt-simpledav-deploy.git
+npm install grunt grunt-simpledav-upload grunt-contrib-watch https://github.com/carlos22/grunt-simpledav-deploy.git --save
 ```
 
 `Gruntfile.js`
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-simpledav-upload');
+  grunt.loadNpmTasks('grunt-simpledav-deploy');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 };
