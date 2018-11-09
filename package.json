@@ -4,8 +4,8 @@
   "description": "upload your files to any webdav server with a grunt task",
   "main": "index.js",
   "dependencies": {
-    "async": "^2.0.0-rc.5",
-    "webdav-fs": "^0.6.0"
+    "async": "^2.6.1",
+    "webdav-fs": "^1.11.0"
   },
   "devDependencies": {},
   "scripts": {
