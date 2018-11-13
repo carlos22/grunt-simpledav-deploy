@@ -24,7 +24,6 @@ function mkdirP (p, opts, f, made) {
 	var cb = f || function () {};
 
 	xfs.mkdir(p, function (er) {
-	opts.grunt.log.debug('mkdirP', er);
 		if (!er) {
 			made = made || p;
 			return cb(null, made);
