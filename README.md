@@ -2,6 +2,12 @@
 
 This is a fork of https://www.npmjs.com/package/grunt-simpledav-upload.
 
+Differences:
+
+* Does not delete any stuff
+* Has integrated mkdir-p method to allow recursive uploads
+* Updated dependencies
+
 ## Usage Example
 
 ```
