@@ -13,7 +13,7 @@ Differences:
 ```
 sudo npm install -g grunt
 npm init # you might skip this if you have a package.json
-npm install grunt grunt-simpledav-upload grunt-contrib-watch https://github.com/carlos22/grunt-simpledav-deploy.git --save
+npm install grunt grunt-simpledav-upload grunt-contrib-watch grunt-simpledav-deploy --save
 ```
 
 `Gruntfile.js`
