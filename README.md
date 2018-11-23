@@ -1,6 +1,8 @@
 # grunt-simpledav-deploy
 
-This is a fork of https://www.npmjs.com/package/grunt-simpledav-upload.
+https://www.npmjs.com/package/grunt-simpledav-deploy/
+
+This is a fork of `grunt-simpledav-upload`.
 
 Differences:
 
